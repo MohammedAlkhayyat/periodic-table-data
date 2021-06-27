@@ -2,26 +2,8 @@
 
 [![NuGet](https://img.shields.io/nuget/v/Periodica.Data.svg)](https://www.nuget.org/packages/Periodica.Data/)
 
-This repository contains data of all chemical elements in the periodic table, wrapped for .NET.
-It is originally created for usage in the [Periodica](https://www.microsoft.com/store/apps/9PB2TD7P6DT3) Windows 10 app and the [ElemenTable](https://elementable.sourceforge.io) Windows Desktop app.
+This repository contains data of all chemical elements in the periodic table, This project is forked in order to use the database with Xreact library.
 
-## Usage
-
-```csharp
-using Bluegrams.Periodica.Data;
-// ...
-// Load the element data
-var table = PeriodicTable.Load();
-// Access elements by symbol or atomic number.
-Element helium = table["He"];
-Element uranium = table[92];
-// Access some data for an element
-int atomicNumber = helium.AtomicNumber;
-int[] shellConfig = helium.ShellConfiguration;
-bool radioactive = uranium.Radioactive;
-// Output all available data
-Debug.WriteLine(uranium.ToString());
-```
 
 ## The Data
 The data of the elements is stored in CSV format in the file [Periodica.Data/Data/ElementData.csv](Periodica.Data/Data/ElementData.csv). Additionally, the names of the elements are translated to several languages. Currently these are:
@@ -76,9 +58,3 @@ This dataset is not complete and probably also not 100% correct. If you find add
 ## License
 
 See [LICENSE](LICENSE).
-
-## Sources
-
-- WebElements, https://www.webelements.com/
-- http://www.rsc.org/periodic-table
-- English Wikipedia (e.g. https://en.wikipedia.org/wiki/List_of_chemical_elements)
